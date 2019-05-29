@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-import { Button, Input, Header, List,Grid, Menu, Segment,Table,Image,Card,Label,Icon,Form,Radio} from 'semantic-ui-react'
+import { Button, Header, Grid, Menu, Segment,Table,Card,Label,Icon,} from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
 
@@ -174,9 +174,9 @@ class LoginPage extends Component {
     var tempData = [
       'Hi, How can i Help you ?',
       'Report Missed Delivery',
-      'I am sorry to hear this , let me know which of them did we missed',
+      'I am sorry to hear this , let me know which of them did we miss',
       'which date we missed',
-      'thank  you'
+      'Thank you, your complaint has been registered, will get back to you soon.'
     ]
     // this.stateChange(this.state.chatArr);
     let timerId = setInterval(() => {
@@ -187,7 +187,7 @@ class LoginPage extends Component {
       this.setState({chatArr: tempChatState},
         console.log(this.state.chatArr)
       )
-      if(tempData.length == 0){
+      if(tempData.length === 0){
         clearInterval(timerId)
       }
     }, 5000);
@@ -199,10 +199,10 @@ class LoginPage extends Component {
     console.log('Message: ', message);
     var displayIcon;
     var datevalue;
-    if(key == 1){
+    if(key === 1){
       displayIcon = true;
     }
-    if(key == 3){
+    if(key === 3){
       datevalue = true;
     }
     return(
